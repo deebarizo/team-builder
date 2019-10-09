@@ -11,9 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-div.team-member-list {
-  width: 50%;
-  margin-left: 25%;
-  text-align: left;
-}

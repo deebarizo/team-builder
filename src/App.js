@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import TeamMembers from "./TeamMembers";
+import Form from "./Form";
 
 const initialTeamMembers = [
   {
@@ -26,11 +27,27 @@ const initialTeamMembers = [
 function App() {
   const [teamMembers, setTeamMembers] = useState(initialTeamMembers);
 
+  const addTeamMember = teamMember => {
+    const { name, email, role } = teamMember;
+
+    const newTeamMember = {
+      id: Date.now(),
+      name,
+      email,
+      role
+    };
+
+    setTeamMembers([...teamMembers, newTeamMember]);
+  };
+
   return (
     <div className="App">
       <h1>Team Builder</h1>
 
-      <TeamMembers teamMembers={teamMembers} />
+      <div className="container">
+        <TeamMembers teamMembers={teamMembers} />
+        <Form addTeamMember={addTeamMember} />
+      </div>
     </div>
   );
 }

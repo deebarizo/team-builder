@@ -20,3 +20,27 @@
 .App-link {
   color: #09d3ac;
 }
+
+div.container {
+  width: 100%;
+}
+
+div.team-member-list {
+  display: inline-block;
+  width: 25%;
+  margin-left: 25%;
+  text-align: left;
+}
+
+div.form {
+  display: inline-block;
+  width: 25%;
+  margin-right: 25%;
+  text-align: left;
+  vertical-align: top;
+}
+
+div.form input {
+  display: block;
+  margin-bottom: 1rem;
+}
